@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Astrochaza - Tienda de productos astronómicos de Cúmulo">
+    <title>Astrochaza - Cúmulo</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images\favicon-32x32.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images\logo.png" alt="Cúmulo" class="logo-image">
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="actividades.html" class="nav-link">Actividades</a></li>
+                    <li><a href="club-lectura.html" class="nav-link">Club de Lectura</a></li>
+                    <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
+                    <li><a href="astrochaza.html" class="nav-link">Astrochaza</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+            </div>
+            
+            <a href="unete.html" class="btn-primary nav-cta">Únete a Nosotros</a>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header store-header">
+        <div class="page-header-bg">
+            <div class="stars"></div>
+            <div class="stars-2"></div>
+        </div>
+        <div class="container">
+            <div class="page-header-content">
+                <div class="store-logo">
+                    <i class="fas fa-store"></i>
+                    <h1 class="page-title">Astrochaza</h1>
+                </div>
+                <p class="page-subtitle">Tu tienda virtual de productos astronómicos. Telescopios, accesorios, libros y más.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Inicio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Astrochaza</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Embed Section -->
+    <section class="catalog-embed-section">
+        <div class="container">
+            <div class="embed-intro">
+                <h2>Explora Nuestro Catálogo Completo</h2>
+                <p>Descubre todos nuestros productos astronómicos en un solo lugar</p>
+            </div>
+            
+            <!-- Botón alternativo para abrir catálogo -->
+            <div class="catalog-cta">
+                <a href="http://tiny.cc/CatalogoAstrochaza" target="_blank" class="btn-catalog">
+                    <i class="fas fa-external-link-alt"></i>
+                    Abrir Catálogo Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-dark">Productos Destacados</h2>
+                <p class="section-subtitle-dark">Una selección de nuestros productos más populares</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Más Vendido</div>
+                    <div class="product-image">
+                        <!-- Reemplaza con imagen real del producto -->
+                        <img src="https://images.unsplash.com/photo-1581088686144-0d9e2446ba8b?w=500&h=500&fit=crop" alt="Telescopio Refractor">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Telescopio Refractor 70mm</h3>
+                        <p class="product-description">Ideal para principiantes. Incluye trípode ajustable y accesorios.</p>
+                        <div class="product-price">
+                            <span class="price">$450.000</span>
+                            <span class="old-price">$550.000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-aos-delay="100">
+                    <div class="product-badge new">Nuevo</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?w=500&h=500&fit=crop" alt="Binoculares Astronómicos">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Binoculares 10x50</h3>
+                        <p class="product-description">Perfectos para observación de objetos celestes de gran campo.</p>
+                        <div class="product-price">
+                            <span class="price">$280.000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&h=500&fit=crop" alt="Mapa Estelar">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mapa Estelar Rotativo</h3>
+                        <p class="product-description">Planisferio celeste para identificar constelaciones todo el año.</p>
+                        <div class="product-price">
+                            <span class="price">$35.000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=500&h=500&fit=crop" alt="Filtro Solar">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Filtro Solar para Telescopio</h3>
+                        <p class="product-description">Observa el Sol de manera segura. Compatible con varios modelos.</p>
+                        <div class="product-price">
+                            <span class="price">$120.000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=500&h=500&fit=crop" alt="Lámpara de luz roja">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Lámpara de Luz Roja</h3>
+                        <p class="product-description">Mantén tu visión nocturna durante las observaciones.</p>
+                        <div class="product-price">
+                            <span class="price">$45.000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-aos-delay="200">
+                    <div class="product-badge">Oferta</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=500&h=500&fit=crop" alt="Set de Oculares">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Set de 4 Oculares</h3>
+                        <p class="product-description">Diferentes aumentos para todas tus necesidades de observación.</p>
+                        <div class="product-price">
+                            <span class="price">$190.000</span>
+                            <span class="old-price">$250.000</span>
+                        </div>
+                        <button class="btn-add-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Consultar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title-dark">Categorías</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-telescope"></i>
+                    </div>
+                    <h3>Telescopios</h3>
+                    <p>Refractores, reflectores y catadióptricos</p>
+                </div>
+                <div class="category-card" data-aos-delay="100">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Libros</h3>
+                    <p>Guías, atlas y literatura astronómica</p>
+                </div>
+                <div class="category-card" data-aos-delay="200">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Accesorios</h3>
+                    <p>Oculares, filtros, monturas y más</p>
+                </div>
+                <div class="category-card" data-aos-delay="300">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Merchandising</h3>
+                    <p>Camisetas, tazas y artículos de Cúmulo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact for Orders -->
+    <section class="order-contact-section">
+        <div class="container">
+            <div class="order-contact-box">
+                <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="contact-content">
+                    <h3>¿Listo para hacer tu pedido?</h3>
+                    <p>Contáctanos por WhatsApp, Instagram o email para consultar disponibilidad y realizar tu compra</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/TU_NUMERO" target="_blank" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                    <a href="https://instagram.com/TU_INSTAGRAM" target="_blank" class="btn-instagram">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="/cdn-cgi/l/email-protection#5d3c2e292f323e353c273c1d3e2830283132733e3230" class="btn-email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3 class="footer-title">Cúmulo</h3>
+                    <p class="footer-text">
+                        Semillero de Astronomía dedicado a la divulgación científica y el aprendizaje colaborativo sobre el universo.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="actividades.html">Actividades</a></li>
+                        <li><a href="club-lectura.html">Club de Lectura</a></li>
+                        <li><a href="proyectos.html">Proyectos</a></li>
+                        <li><a href="astrochaza.html">Astrochaza</a></li>
+                        <li><a href="unete.html">Únete</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contacto</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fd94939b92bd9e8890889192d39e9290">[email&#160;protected]</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bogotá, Colombia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Cúmulo - Semillero de Astronomía.     </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
