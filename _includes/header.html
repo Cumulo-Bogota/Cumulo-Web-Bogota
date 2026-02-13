@@ -2,22 +2,22 @@
 <nav class="navbar" id="navbar">
   <div class="container nav-container">
     <div class="logo">
-      <img src="/images/logo.png" alt="Cúmulo" class="logo-image">
+      <img src="{{ '/images/logo.png' | relative_url }}" alt="Cúmulo" class="logo-image">
     </div>
 
     <div class="nav-menu" id="navMenu">
       <ul class="nav-links">
-        <li><a href="/index.html" class="nav-link active">Inicio</a></li>
-        <li><a href="/pages/actividades.html" class="nav-link">Actividades</a></li>
-        <li><a href="/pages/club-lectura.html" class="nav-link">Club de Lectura</a></li>
-        <li><a href="/pages/telescopios.html" class="nav-link">Telescopios</a></li>
-        <li><a href="/pages/proyectos.html" class="nav-link">Proyectos</a></li>
-        <li><a href="/pages/astrochaza.html" class="nav-link">Astrochaza</a></li>
-        <li><a href="/pages/blog.html" class="nav-link">Blog</a></li>
+        <li><a href="{{ '/index.html' | relative_url }}" class="nav-link active">Inicio</a></li>
+        <li><a href="{{ '/pages/actividades.html' | relative_url }}" class="nav-link">Actividades</a></li>
+        <li><a href="{{ '/pages/club-lectura.html' | relative_url }}" class="nav-link">Club de Lectura</a></li>
+        <li><a href="{{ '/pages/telescopios.html' | relative_url }}" class="nav-link">Telescopios</a></li>
+        <li><a href="{{ '/pages/proyectos.html' | relative_url }}" class="nav-link">Proyectos</a></li>
+        <li><a href="{{ '/pages/astrochaza.html' | relative_url }}" class="nav-link">Astrochaza</a></li>
+        <li><a href="{{ '/pages/blog.html' | relative_url }}" class="nav-link">Blog</a></li>
       </ul>
     </div>
 
-    <a href="/pages/unete.html" class="btn-primary nav-cta">Únete a Nosotros</a>
+    <a href="{{ '/pages/unete.html' | relative_url }}" class="btn-primary nav-cta">Únete a Nosotros</a>
 
     <button class="hamburger" id="hamburger">
       <span></span>
