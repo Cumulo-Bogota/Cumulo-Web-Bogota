@@ -6,6 +6,7 @@ Si estás leyendo esto, probablemente hagas parte de Cúmulo VIP y tengas la tar
 
 - [Edición básica](#edición-básica)
 - [Edición avanzada](#edición-avanzada)
+    - [Entendiendo Jekyll](#entendiendo-jekyll)
 - [Committing changes](#committing-changes)
 
 
@@ -79,6 +80,77 @@ bundle exec jekyll serve --config _config.yml,_config_dev.yml --port 4000 --live
 y en cualquier navegador accede a la dirección `127.0.0.1:4000` 
 
 Cada vez que guardes cambios localmente la página se actualizará de manera automática, una vez termines de realizar los cambios súbelos a GitHub.
+
+
+### Entendiendo Jekyll
+
+Piensa en Jekyll como un compositor de la página, toma los datos de distintos sitios (los directorios y archivos que comienzan por _) y los une para generar un HTML que el navegador pueda entender, te preguntarás entonces ¿por qué no solo hacer el HTML de manera normal y ya? Y la respuesta es porque eso es un diseño demasiado rígido, difícil de leer y propenso a errores al ser editado, además si hay componentes que se comparten entre diferentes páginas y se quiere realizar un cambio, ¡todos los archivos tendrían que ser editados! Jekyll permite un diseño modular donde cada componente se define una vez y se puede utilizar como plantilla dentro de las páginas a conveniencia. Para lograr esto, Jekyll utiliza los directorios `_layouts`, `_includes` y `_data`, vamos a ver cada uno en detalle:
+
+Estructura del proyecto:
+
+```bash
+Gemfile
+_config.yml
+_config_dev.yml
+_data
+└── telescopios.yml
+_includes
+└── header.html
+_layouts
+└── default.html
+_site
+images
+└── logo.png
+index.html
+pages
+├── actividades.html
+└── ...
+scripts
+└── script.js
+styles
+├── pages
+└── style.css
+```
+
+#### `_layouts` 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+</head>
+<body>
+  {{ content }}
+</body>
+</html>
+```
+
+Corresponden a la "plantilla principal", la estructura del documento HTML que se va a generar, es importante principalmente por el `<head>`, donde se va a declarar el título de la página, el uso de estilos `.css`, fuentes, iconos y el favicon (la imagen que acompaña al nombre de la pestaña). ¿Notas algo extraño? `{{ page.title }}` y `{{ content }}` no forman parte de la sintaxis típica de HTML, son formas de decirle a Jekyll que algo va a ser insertado allí, ¿pero qué? Eso depende, el contenido que se vaya a insertar puede venir de diferentes sitios como el *front matter* o nuestra `página.html`, pero se hablará de esto en las secciones pertinentes.
+
+#### `_includes` 
+
+```html
+<div class="header">
+  <p>Hello there!</p>
+  <p>{{ include.general_kenobi }}</p>
+  <img src="{{ '/images/grievous.jpg' | relative_url }}" alt="General Grievous">
+</div>
+```
+
+Son fragmentos de código HTML con una funcionalidad parecida a los `_layouts`, pero son plantillas más pequeñas para elementos estándar del diseño de la página, pueden o no tener elementos mutables que se distinguen por los `{{ include.variable_name }}`. Los valores de las variables se pueden establecer al llamar a `include`, del *front matter* o de `_data`, pero para nuestro caso **siempre** provendrán de `_data`.
+
+#### `_data` 
+
+```yml
+title: Título
+description: Lorem ipsum dolor...
+image: /images/imagen.jpg
+```
+
+Donde se almacenarán el texto y enlaces a imágenes que se mostrarán en determinada página; en cada archivo cuyo nombre **deberá corresponder con el de la página que usará los valores** se guardan pares del tipo `nombre_de_variable: contenido`. También permite estructuras más complejas para separar los datos de cada include que se llame en la página pero eso deberá documentarse.
 
 
 ---
