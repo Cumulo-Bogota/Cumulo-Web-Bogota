@@ -1,24 +1,18 @@
 ---
 layout: default
-title: Únete a Nosotros - Cúmulo
+title: Únete a Nosotros
 ---
+
+<!-- Site data -->
+{% assign content = site.data.unete %}
+
 <!-- Header -->
 {% include header.html %}
 
-<!-- Page Header -->
-<section class="page-header join-header">
-  <div class="page-header-bg">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-  </div>
-  <div class="container">
-    <div class="page-header-content">
-      <h1 class="page-title">Únete a Cúmulo</h1>
-      <p class="page-subtitle">Forma parte de nuestra comunidad astronómica y explora el universo con nosotros</p>
-    </div>
-  </div>
-</section>
-
+<!-- Banner -->
+{% include banner.html
+  page_description = content.page_description
+%}
 
 <!-- Team Photos Section -->
 <section class="team-photos-section">

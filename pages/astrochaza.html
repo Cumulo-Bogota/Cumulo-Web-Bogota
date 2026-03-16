@@ -1,31 +1,18 @@
 ---
 layout: default
-title: Astrochaza - Cúmulo
+title: Astrochaza
 ---
+
+<!-- Site data -->
+{% assign content = site.data.astrochaza %}
+
 <!-- Header -->
 {% include header.html %}
 
-<!-- Page Header -->
-<section class="page-header store-header">
-  <div class="page-header-bg">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-  </div>
-  <div class="container">
-    <div class="page-header-content">
-      <div class="store-logo">
-        <i class="fas fa-store"></i>
-        <h1 class="page-title">Astrochaza</h1>
-      </div>
-      <p class="page-subtitle">Tu tienda virtual de productos astronómicos. Telescopios, accesorios, libros y más.</p>
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Astrochaza</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Banner -->
+{% include banner.html
+  page_description = content.page_description
+%}
 
 <!-- Catalog Embed Section -->
 <section class="catalog-embed-section">

@@ -1,29 +1,18 @@
 ---
 layout: default
-title: Club de Lectura - Cúmulo
+title: Club de Lectura
 ---
+
+<!-- Site data -->
+{% assign content = site.data.club-lectura %}
+
 <!-- Header -->
 {% include header.html %}
 
-<!-- Page Header -->
-<section class="page-header">
-  <div class="page-header-bg">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-  </div>
-  <div class="container">
-    <div class="page-header-content">
-      <h1 class="page-title">Club de Lectura</h1>
-      <p class="page-subtitle">Reuniones semanales donde exploramos libros fascinantes sobre astronomía, cosmología y
-        ciencias del espacio</p>
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Club de Lectura</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Banner -->
+{% include banner.html
+  page_description = content.page_description
+%}
 
 <!-- Reading Sessions -->
 <section class="reading-sessions">

@@ -1,28 +1,18 @@
 ---
 layout: default
-title: Actividades - Cúmulo
+title: Actividades
 ---
+
+<!-- Site data -->
+{% assign content = site.data.actividades %}
+
 <!-- Header -->
 {% include header.html %}
 
-<!-- Page Header -->
-<section class="page-header">
-  <div class="page-header-bg">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-  </div>
-  <div class="container">
-    <div class="page-header-content">
-      <h1 class="page-title">Nuestras Actividades</h1>
-      <p class="page-subtitle">Explora el registro de charlas, visitas, observaciones y eventos que realizamos en Cúmulo</p>
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Actividades</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Banner -->
+{% include banner.html
+  page_description = content.page_description
+%}
 
 <!-- Activities Archive -->
 <section class="activities-archive">

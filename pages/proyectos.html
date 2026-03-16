@@ -1,29 +1,18 @@
 ---
 layout: default
-title: Proyectos - Cúmulo
+title: Proyectos
 ---
+
+<!-- Site data -->
+{% assign content = site.data.proyectos %}
+
 <!-- Header -->
 {% include header.html %}
 
-<!-- Page Header -->
-<section class="page-header">
-  <div class="page-header-bg">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-  </div>
-  <div class="container">
-    <div class="page-header-content">
-      <h1 class="page-title">Nuestros Proyectos</h1>
-      <p class="page-subtitle">Investigaciones y proyectos de divulgación astronómica desarrollados por el semillero
-      </p>
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Proyectos</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Banner -->
+{% include banner.html
+  page_description = content.page_description
+%}
 
 <!-- Projects Section -->
 <section class="projects-section">

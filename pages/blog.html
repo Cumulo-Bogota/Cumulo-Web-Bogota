@@ -1,29 +1,18 @@
 ---
 layout: default
-title: Blog - Cúmulo
+title: Blog
 ---
+
+<!-- Include site's data -->
+{% assign content = site.data.blog %}
+
 <!-- Header -->
 {% include header.html %}
 
-<!-- Page Header -->
-<section class="page-header">
-  <div class="page-header-bg">
-    <div class="stars"></div>
-    <div class="stars-2"></div>
-  </div>
-  <div class="container">
-    <div class="page-header-content">
-      <h1 class="page-title">Blog de Cúmulo</h1>
-      <p class="page-subtitle">Artículos escritos por miembros del semillero sobre astronomía, ciencia y el universo
-      </p>
-      <div class="breadcrumb">
-        <a href="index.html">Inicio</a>
-        <i class="fas fa-chevron-right"></i>
-        <span>Blog</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- Banner -->
+{% include banner.html
+  page_description = content.page_description
+%}
 
 <!-- Featured Article -->
 <section class="featured-article">
