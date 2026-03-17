@@ -22,7 +22,7 @@
 
     <div class="blog-card-footer">
       <span class="read-time"><i class="fas fa-clock"></i>{{ include.article.read_time }}</span>
-      <a href="{{ include.article.url }}" class="read-more-link">
+      <a href="{{ include.article.url | relative_url }}" class="read-more-link">
         Leer más <i class="fas fa-arrow-right"></i>
       </a>
     </div>
