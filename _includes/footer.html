@@ -19,13 +19,14 @@
       <div class="footer-col">
         <h3 class="footer-title">Enlaces Rápidos</h3>
         <ul class="footer-links">
-          <li><a href="{{ '/index.html' | relative_url }}">Inicio</a></li>
-          <li><a href="{{ '/pages/actividades.html' | relative_url }}">Actividades</a></li>
-          <li><a href="{{ '/pages/club-lectura.html' | relative_url }}">Club de Lectura</a></li>
-          <li><a href="{{ '/pages/blog.html' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/pages/proyectos.html' | relative_url }}">Proyectos</a></li>
-          <li><a href="{{ '/pages/astrochaza.html' | relative_url }}">Astrochaza</a></li>
-          <li><a href="{{ '/pages/unete.html' | relative_url }}">Únete a Nosotros</a></li>
+          <li><a href="{{ home.url | relative_url }}">{{ home.title }}</a></li>
+          <li><a href="{{ activities.url | relative_url }}">{{ activities.title }}</a></li>
+          <li><a href="{{ club.url | relative_url }}">{{ club.title }}</a></li>
+          <li><a href="{{ telescopes.url | relative_url }}">{{ telescopes.title }}</a></li>
+          <li><a href="{{ projects.url | relative_url }}">{{ projects.title }}</a></li>
+          <li><a href="{{ store.url | relative_url }}">{{ store.title }}</a></li>
+          <li><a href="{{ blog.url | relative_url }}">{{ blog.title }}</a></li>
+          <li><a href="{{ join_us.url | relative_url }}">{{ join_us.title }}</a></li>
         </ul>
       </div>
 

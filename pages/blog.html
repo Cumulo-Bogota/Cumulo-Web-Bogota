@@ -1,13 +1,12 @@
 ---
 layout: default
 title: Blog
+key: 6
+feat: test
 ---
 
-<!-- Include site's data -->
+<!-- Site data -->
 {% assign content = site.data.blog %}
-
-<!-- Header -->
-{% include header.html %}
 
 <!-- Banner -->
 {% include banner.html
@@ -15,60 +14,8 @@ title: Blog
 %}
 
 <!-- Featured Article -->
-<section class="featured-article">
-  <div class="container">
-    <div class="featured-badge">
-      <i class="fas fa-star"></i>
-      <span>Artículo Destacado</span>
-    </div>
-
-    <article class="featured-post">
-      <div class="featured-post-image">
-        <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1200&h=600&fit=crop"
-          alt="James Webb">
-        <div class="featured-category">Astrofísica</div>
-      </div>
-      <div class="featured-post-content">
-        <div class="post-meta">
-          <div class="author-info">
-            <img src="https://ui-avatars.com/api/?name=Maria+Rodriguez&background=5054AF&color=fff&size=40"
-              alt="María Rodríguez" class="author-avatar">
-            <div>
-              <span class="author-name">María Rodríguez</span>
-              <span class="post-date"><i class="fas fa-calendar"></i> 20 de Enero, 2026</span>
-            </div>
-          </div>
-          <div class="post-stats">
-            <span><i class="fas fa-clock"></i> 8 min lectura</span>
-          </div>
-        </div>
-
-        <h2 class="featured-post-title">
-          <a href="blog-post-1.html">El Telescopio James Webb: Un Año Revolucionando Nuestra Comprensión del
-            Universo</a>
-        </h2>
-
-        <p class="featured-post-excerpt">
-          Desde su lanzamiento, el Telescopio Espacial James Webb ha transformado nuestra comprensión del cosmos. En
-          este artículo exploramos los descubrimientos más importantes del último año, desde las primeras galaxias
-          hasta exoplanetas potencialmente habitables, y cómo estas observaciones están reescribiendo los libros de
-          astrofísica.
-        </p>
-
-        <div class="featured-post-tags">
-          <span class="tag">James Webb</span>
-          <span class="tag">Observación Astronómica</span>
-          <span class="tag">Galaxias</span>
-        </div>
-
-        <a href="blog-post-1.html" class="btn-read-more">
-          Leer Artículo Completo
-          <i class="fas fa-arrow-right"></i>
-        </a>
-      </div>
-    </article>
-  </div>
-</section>
+{% assign featured = site.data.articles[page.feat] %}
+{% include article-preview.html cont=featured %}
 
 <!-- Blog Grid -->
 <section class="blog-grid">
@@ -107,7 +54,7 @@ title: Blog
 
           <div class="blog-card-footer">
             <span class="read-time"><i class="fas fa-clock"></i> 5 min</span>
-            <a href="blog-post-2.html" class="read-more-link">
+            <a href="articles/test.html" class="read-more-link">
               Leer más <i class="fas fa-arrow-right"></i>
             </a>
           </div>
@@ -277,6 +224,3 @@ title: Blog
     </div>
   </div>
 </section>
-
-<!-- Footer -->
-{% include footer.html %}
