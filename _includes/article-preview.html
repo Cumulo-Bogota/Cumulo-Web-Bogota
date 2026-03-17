@@ -1,9 +1,9 @@
 <section class="featured-article">
   <div class="container">
-    <!-- <div class="featured-badge"> -->
-    <!--   <i class="fas fa-star"></i> -->
-    <!--   <span>Artículo Destacado</span> -->
-    <!-- </div> -->
+    <div class="featured-badge">
+      <i class="fas fa-star"></i>
+      <span>Artículo Destacado</span>
+    </div>
 
     <article class="featured-post">
       <div class="featured-post-image">
@@ -13,11 +13,11 @@
       <div class="featured-post-content">
         <div class="post-meta">
           <div class="author-info">
-            <img src={{ include.cont.author_photo }}
+            <img src={{ include.cont.author_picture }}
             alt={{ include.cont.author_name }} class="author-avatar">
             <div>
-              <span class="author-name">{{ include.cont.author_name }}</span>
-              <span class="post-date"><i class="fas fa-calendar"></i> {{ include.cont.post_date }}</span>
+              <span class="author-name">{{ include.cont.author }}</span>
+              <span class="post-date"><i class="fas fa-calendar"></i> {{ include.cont.publish_date }}</span>
             </div>
           </div>
           <div class="post-stats">
@@ -26,10 +26,10 @@
         </div>
 
         <h2 class="featured-post-title">
-          <a href="blog-post-1.html">{{ include.cont.post_title }}</a>
+          <a href="blog-post-1.html">{{ include.cont.title }}</a>
         </h2>
 
-        <p class="featured-post-excerpt">{{ include.cont.summary }}</p>
+        <p class="featured-post-excerpt">{{ include.cont.excerpt }}</p>
 
         <div class="featured-post-tags">
           {% for tag in include.cont.tags %}
@@ -37,7 +37,7 @@
           {% endfor %}
         </div>
 
-        <a href="blog-post-1.html" class="btn-read-more">
+        <a href="/articles/test.html" class="btn-read-more">
           Leer Artículo Completo
           <i class="fas fa-arrow-right"></i>
         </a>

@@ -35,6 +35,11 @@ facebook: "https://www."
 twitter: "https://www.x.com/cumulobogota"
 threads: "https://www.threads.com/@cumulobogota"
 
+# Add _articles collection
+collections:
+  articles:
+    output: true
+
 # Build settings
 plugins:
   - jekyll-feed

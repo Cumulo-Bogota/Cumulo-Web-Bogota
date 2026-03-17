@@ -1,12 +1,26 @@
 ---
 layout: article
-title: Test
+
+slug: test
+title: Título del artículo
+author: Nombre D. Autor
+category: Categoría
+featured_image: https://images.unsplash.com/photo-1543722530-d2c3201371e7?w=600&h=400&fit=crop
+
+publish_date: Fecha de publicación
+read_time: Tiempo de lectura
+tags: ["James Webb", "Observación Astronómica", "Galaxias", "Exoplanetas", "Astrofísica"]
+
+author_profile: Perfil del autor.
+author_picture: https://ui-avatars.com/api/?name=Maria+Rodriguez&background=5054AF&color=fff&size=40
+featured_image_description: Descripción de la imagen
 ---
 
-# LOREM
+Summary paragraph
 
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac finibus mi. Proin tristique dapibus mattis. In volutpat, sapien at imperdiet mattis, risus purus porta sem, id bibendum velit lacus ut turpis. Ut nec enim libero. Vivamus convallis auctor lorem, eget gravida orci lacinia eget. Ut tincidunt neque efficitur, placerat libero nec, condimentum nisi. Sed eu vestibulum risus. Donec vulputate urna id sagittis varius. Morbi eu purus et orci mollis maximus rutrum id purus. Cras erat elit, vehicula quis est eu, pharetra condimentum felis. Suspendisse facilisis velit nec hendrerit ornare.
 
+# LOREM
 
 ## IPSUM
 

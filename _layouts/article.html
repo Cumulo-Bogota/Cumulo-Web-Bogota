@@ -27,6 +27,8 @@
 
 <body>
 
+  {% include _include.html %}
+
   <!-- Header -->
   {% include header.html %}
 
@@ -35,31 +37,27 @@
     <div class="blog-post-header">
       <div class="container">
         <div class="breadcrumb">
-          <a href="{{ '/index.html' | relative_url }}">Inicio</a>
+          <a href="{{ home.url | relative_url }}">{{ home.title }}</a>
           <i class="fas fa-chevron-right"></i>
-          <a href="{{ '/pages/blog.html' | relative_url }}">Blog</a>
+          <a href="{{ blog.url | relative_url }}">{{ blog.title }}</a>
           <i class="fas fa-chevron-right"></i>
-          <span>James Webb</span>
+          <span>{{ page.title }}</span>
         </div>
 
-        <div class="post-category-badge">Astrofísica</div>
+        <div class="post-category-badge">{{ page.category }}</div>
 
-        <h1 class="post-title">
-          El Telescopio James Webb: Un Año Revolucionando Nuestra Comprensión del Universo
-        </h1>
+        <h1 class="post-title">{{ page.title }}</h1>
 
         <div class="post-author-section">
           <div class="author-card">
-            <img src="https://ui-avatars.com/api/?name=Maria+Rodriguez&background=5054AF&color=fff&size=80"
-              alt="María Rodríguez" class="author-image">
+            <img src={{ page.author_picture }}
+                 alt="{{ page.author }}" class="author-image">
             <div class="author-details">
-              <h3 class="author-name-large">María Rodríguez</h3>
-              <p class="author-bio">Estudiante de Física, miembro de Cúmulo desde 2024. Apasionada por la astrofísica
-                observacional.</p>
+              <h3 class="author-name-large">{{ page.author }}</h3>
+              <p class="author-bio">{{ page.author_profile }}</p>
               <div class="post-metadata">
-                <span><i class="fas fa-calendar"></i> 20 de Enero, 2026</span>
-                <span><i class="fas fa-clock"></i> 8 minutos de lectura</span>
-                <span><i class="fas fa-eye"></i> 234 visitas</span>
+                <span><i class="fas fa-calendar"></i>{{ page.publish_date }}</span>
+                <span><i class="fas fa-clock"></i>{{ page.read_time }}</span>
               </div>
             </div>
           </div>
@@ -69,9 +67,9 @@
 
     <!-- Featured Image -->
     <div class="post-featured-image">
-      <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1400&h=700&fit=crop"
-        alt="Telescopio James Webb">
-      <div class="image-caption">Imagen artística del Telescopio Espacial James Webb en órbita</div>
+      <img src="{{ page.featured_image }}"
+           alt="{{ page.featured_image_description }}">
+      <div class="image-caption">{{ page.featured_image_description }}</div>
     </div>
 
     <!-- Article Content -->
@@ -85,7 +83,7 @@
             <i class="fas fa-rocket"></i>
             <div>
               <h4>Para Saber Más</h4>
-              <p>Si te interesa seguir de cerca los descubrimientos del JWST, te recomendamos visitar el sitio oficial
+              <p>(Not modular) Si te interesa seguir de cerca los descubrimientos del JWST, te recomendamos visitar el sitio oficial
                 de la NASA y el Space Telescope Science Institute, donde publican regularmente las nuevas imágenes y
                 resultados científicos.</p>
             </div>
@@ -94,11 +92,9 @@
           <!-- Tags -->
           <div class="post-tags">
             <h4>Etiquetas:</h4>
-            <a href="#" class="tag">James Webb</a>
-            <a href="#" class="tag">Telescopios Espaciales</a>
-            <a href="#" class="tag">Galaxias</a>
-            <a href="#" class="tag">Exoplanetas</a>
-            <a href="#" class="tag">Astrofísica</a>
+            {% for tag in page.tags %}
+              <a href="#" class="tag">{{ tag }}</a>
+            {% endfor %}
           </div>
 
           <!-- Share Buttons -->
@@ -184,7 +180,7 @@
             <i class="fas fa-users"></i>
             <h3>Únete a Cúmulo</h3>
             <p>Escribe artículos como este y comparte tu pasión por la astronomía</p>
-            <a href="unete.html" class="btn-primary">Más Información</a>
+            <a href="{{ join_us.url }}" class="btn-primary">Más Información</a>
           </div>
 
         </aside>
@@ -202,8 +198,8 @@
         <h2>¿Quieres Participar en Nuestro Blog?</h2>
         <p>Si eres miembro de Cúmulo y te apasiona escribir sobre astronomía, ¡nos encantaría publicar tus artículos!
         </p>
-        <a href="unete.html" class="btn-hero">
-          <span>Únete a Cúmulo</span>
+        <a href="{{ join_us.url }}" class="btn-hero">
+          <span>{{ join_us.title }}</span>
           <i class="fas fa-arrow-right"></i>
         </a>
       </div>
